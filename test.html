@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partner with Members Choice</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:         #1b2a4a;
+      --sand:         #f5f0eb;
+      --coral:        #e0714a;
+      --purple:       #9b8ec4;
+      --mint:         #7ecec4;
+      --peach:        #f0b8a0;
+      --text:         #2c3e50;
+      --muted:        #6b7280;
+      --white:        #ffffff;
+      --lavender-bg:  #edeaf8;
+      --lavender-mid: #c8c2e8;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── partner SECTION ── */
+    .home-partner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+      padding: 4rem 5rem 3rem;
+      min-height: 520px;
+      position: relative;
+    }
+
+    /* ── LEFT COPY ── */
+    .home-partner__copy {}
+
+    .home-partner__heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.2rem;
+    }
+
+    .home-partner__heading .home-partner__dot {
+      color: var(--coral);
+    }
+
+    .home-partner__tagline {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .home-partner__sub {
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    /* ── RIGHT NETWORK DIAGRAM ── */
+    .home-partner__network {
+      position: relative;
+      height: 360px;
+    }
+
+    .home-network__card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -52%);
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.4rem 1.8rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+      z-index: 2;
+      width: 220px;
+    }
+
+    .home-network__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .home-network__logo-mark {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .home-network__logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .home-network__logo-text strong {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .home-network__logo-text span {
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .home-network__badge {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 1px solid #eee;
+      padding-top: 0.5rem;
+      width: 100%;
+    }
+
+    .home-network__icons {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.2rem;
+    }
+
+    .home-network__icon {
+      width: 22px;
+      height: 22px;
+      color: var(--muted);
+    }
+
+    /* Member avatars */
+    .home-network__member {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      z-index: 3;
+    }
+
+    .home-network__avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      background: #f0eaf7;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .home-network__avatar svg {
+      width: 42px;
+      height: 50px;
+    }
+
+    .home-network__member-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Member positions */
+    .home-network__member--tl { top: 4%;  left: 10%; }
+    .home-network__member--tc { top: 0%;  left: 48%; transform: translateX(-50%); }
+    .home-network__member--tr { top: 10%; right: 2%; }
+    .home-network__member--ml { top: 48%; left: 0%;  transform: translateY(-50%); }
+    .home-network__member--bc { bottom: 2%; left: 44%; transform: translateX(-50%); }
+    .home-network__member--br { bottom: 8%; right: 0%; }
+
+    /* Connector dots */
+    .home-network__dot {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .home-network__dot--coral  { background: var(--coral);  width: 9px; height: 9px; }
+    .home-network__dot--purple { background: var(--purple); width: 7px; height: 7px; }
+    .home-network__dot--mint   { background: var(--mint);   width: 7px; height: 7px; }
+
+    /* SVG connector lines */
+    .home-network__lines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Flowing wave background */
+    .home-network__wave {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── FEATURE CARDS ── */
+    .home-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 0 5rem 2.5rem;
+    }
+
+    .home-feature-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+      display: flex;
+      gap: 1.4rem;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-feature-card--members {
+      background: #f8f6ff;
+    }
+
+    .home-feature-card--assoc {
+      background: #f2fbfa;
+    }
+
+    /* Decorative wave inside card */
+    .home-feature-card__deco {
+      position: absolute;
+      right: -20px;
+      top: 0;
+      bottom: 0;
+      width: 55%;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .home-feature-card__icon-wrap {
+      flex-shrink: 0;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-feature-card--members .home-feature-card__icon-wrap {
+      background: var(--purple);
+    }
+
+    .home-feature-card--assoc .home-feature-card__icon-wrap {
+      background: var(--mint);
+    }
+
+    .home-feature-card__icon-wrap svg {
+      width: 26px;
+      height: 26px;
+      color: var(--white);
+    }
+
+    .home-feature-card__body {}
+
+    .home-feature-card__title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 0.9rem;
+    }
+
+    .home-feature-card__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .home-feature-card__list li {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .home-feature-card__check {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .home-feature-card--members .home-feature-card__check { color: var(--purple); }
+    .home-feature-card--assoc  .home-feature-card__check { color: var(--mint); }
+
+    /* ── STEPS ── */
+    .home-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 1.5rem 5rem 2.5rem;
+    }
+
+    .home-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .home-step__icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .home-step--1 .home-step__icon-wrap { background: #fde8df; }
+    .home-step--2 .home-step__icon-wrap { background: var(--lavender-bg); }
+    .home-step--3 .home-step__icon-wrap { background: #d9f5f2; }
+
+    .home-step__icon-wrap svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .home-step--1 .home-step__icon-wrap svg { color: var(--coral); }
+    .home-step--2 .home-step__icon-wrap svg { color: var(--purple); }
+    .home-step--3 .home-step__icon-wrap svg { color: var(--mint); }
+
+    .home-step__text {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .home-step__num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--coral);
+    }
+
+    .home-step--2 .home-step__num { color: var(--purple); }
+    .home-step--3 .home-step__num { color: var(--mint); }
+
+    .home-step__label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .home-steps__arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 1.6rem;
+      color: var(--muted);
+    }
+
+    .home-steps__arrow svg {
+      width: 36px;
+      height: 16px;
+    }
+
+    /* ── CTA BUTTONS ── */
+    .home-cta {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0 5rem 4rem;
+    }
+
+    .home-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-size: 0.97rem;
+      font-weight: 500;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      text-decoration: none;
+      border: none;
+    }
+
+    .home-cta__btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .home-cta__btn--primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .home-cta__btn--secondary {
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--navy);
+    }
+
+    .home-cta__btn svg {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     partner
+════════════════════════════════ -->
+<section class="home-partner">
+
+  <!-- Left copy -->
+  <div class="home-partner__copy">
+    <h1 class="home-partner__heading">
+      Partner with<br>Members Choice<span class="home-partner__dot">.</span>
+    </h1>
+    <p class="home-partner__tagline">A member benefit at no cost to your organisation.</p>
+    <p class="home-partner__sub">We power the quotes. You deliver the value.</p>
+  </div>
+
+  <!-- Right network diagram -->
+  <div class="home-partner__network" aria-hidden="true">
+
+    <!-- Background wave SVG -->
+    <svg class="home-network__wave" viewBox="0 0 500 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <path d="M60 120 Q180 60 280 160 Q380 260 460 180" stroke="#f0b8a0" stroke-width="36" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <path d="M40 200 Q160 120 280 220 Q380 300 480 220" stroke="#c8c2e8" stroke-width="28" fill="none" opacity="0.38" stroke-linecap="round"/>
+      <path d="M80 260 Q200 180 300 260 Q400 340 480 270" stroke="#7ecec4" stroke-width="22" fill="none" opacity="0.35" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Connector lines SVG (percentages map to the absolute-positioned members) -->
+    <svg class="home-network__lines" viewBox="0 0 500 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- TL member → card -->
+      <line x1="90"  y1="42"  x2="215" y2="155" stroke="#ddd" stroke-width="1.2"/>
+      <!-- TC member → card -->
+      <line x1="245" y1="20"  x2="255" y2="128" stroke="#ddd" stroke-width="1.2"/>
+      <!-- TR member → card -->
+      <line x1="420" y1="52"  x2="305" y2="148" stroke="#ddd" stroke-width="1.2"/>
+      <!-- ML member → card -->
+      <line x1="45"  y1="182" x2="188" y2="185" stroke="#ddd" stroke-width="1.2"/>
+      <!-- BC member → card -->
+      <line x1="240" y1="325" x2="248" y2="235" stroke="#ddd" stroke-width="1.2"/>
+      <!-- BR member → card -->
+      <line x1="430" y1="295" x2="310" y2="220" stroke="#ddd" stroke-width="1.2"/>
+
+      <!-- Accent dots on lines -->
+      <circle cx="150" cy="97"  r="4.5" fill="#e0714a"/>
+      <circle cx="138" cy="185" r="3.5" fill="#9b8ec4"/>
+      <circle cx="370" cy="270" r="3.5" fill="#7ecec4"/>
+      <circle cx="358" cy="98"  r="4"   fill="#f0b8a0"/>
+    </svg>
+
+    <!-- Central card -->
+    <div class="home-network__card">
+      <div class="home-network__logo">
+        <!-- Members Choice logo mark (M chevron) -->
+        <svg class="home-network__logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="6" fill="#f5f0eb"/>
+          <path d="M6 22 L12 10 L16 18 L20 10 L26 22" stroke="#9b8ec4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M6 26 L12 14 L16 22 L20 14 L26 26" stroke="#7ecec4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <div class="home-network__logo-text">
+          <strong>Members Choice</strong>
+          <span>Australia</span>
+        </div>
+      </div>
+      <div class="home-network__badge">AI-Powered<br>Insurance Platform</div>
+      <!-- Insurance category icons -->
+      <div class="home-network__icons">
+        <!-- Car -->
+        <svg class="home-network__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 17H3v-5l2.5-5h13L21 12v5h-2"/>
+          <circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/>
+        </svg>
+        <!-- Home -->
+        <svg class="home-network__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+          <path d="M9 21V12h6v9"/>
+        </svg>
+        <!-- Heart/Health -->
+        <svg class="home-network__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+        <!-- Briefcase/Travel -->
+        <svg class="home-network__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2"/>
+          <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+          <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+        </svg>
+        <!-- Pet -->
+        <svg class="home-network__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C9.24 2 7 6 7 9c0 2.21 1.34 4.12 3.27 5l-1 3.5a1 1 0 001.92.54L12 15l.81 3.04a1 1 0 001.92-.54l-1-3.5C15.66 13.12 17 11.21 17 9c0-3-2.24-7-5-7z"/>
+          <circle cx="9" cy="5" r="1"/><circle cx="15" cy="5" r="1"/>
+          <circle cx="6" cy="9"  r="1"/><circle cx="18" cy="9" r="1"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Member avatars -->
+
+    <!-- TL: female with ponytail, peach bg -->
+    <div class="home-network__member home-network__member--tl">
+      <div class="home-network__avatar" style="background:#fde8df">
+        <svg viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="21" cy="17" rx="9" ry="10" fill="#c8956c"/>
+          <path d="M27 14 Q32 8 30 4 Q26 2 24 8" fill="#3d2b1f"/>
+          <ellipse cx="21" cy="16" rx="8" ry="9" fill="#e8b08a"/>
+          <ellipse cx="21" cy="14" rx="7" ry="6" fill="#3d2b1f"/>
+          <path d="M6 50 Q8 32 21 30 Q34 32 36 50Z" fill="#e8b08a"/>
+          <path d="M13 50 Q14 36 21 34 Q28 36 29 50Z" fill="#f9d0b0"/>
+        </svg>
+      </div>
+      <span class="home-network__member-label">Member</span>
+    </div>
+
+    <!-- TC: male dark hair, lavender bg -->
+    <div class="home-network__member home-network__member--tc">
+      <div class="home-network__avatar" style="background:#edeaf8">
+        <svg viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="21" cy="16" rx="9" ry="10" fill="#c8a882"/>
+          <ellipse cx="21" cy="14" rx="8" ry="7"  fill="#2d1f14"/>
+          <ellipse cx="21" cy="18" rx="8" ry="9"  fill="#d4a574"/>
+          <path d="M6 50 Q8 32 21 30 Q34 32 36 50Z" fill="#5b7fa6"/>
+          <path d="M13 50 Q14 36 21 34 Q28 36 29 50Z" fill="#d4a574"/>
+        </svg>
+      </div>
+      <span class="home-network__member-label">Member</span>
+    </div>
+
+    <!-- TR: female long dark hair, mint bg -->
+    <div class="home-network__member home-network__member--tr">
+      <div class="home-network__avatar" style="background:#d9f5f2">
+        <svg viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="21" cy="16" rx="9" ry="10" fill="#b08060"/>
+          <path d="M12 10 Q10 4 21 3 Q32 4 30 10 Q34 20 30 28 Q28 14 21 14 Q14 14 12 28 Q8 20 12 10Z" fill="#1a0f08"/>
+          <ellipse cx="21" cy="18" rx="8" ry="9"  fill="#c8a882"/>
+          <path d="M6 50 Q8 32 21 30 Q34 32 36 50Z" fill="#9b8ec4"/>
+          <path d="M13 50 Q14 36 21 34 Q28 36 29 50Z" fill="#c8a882"/>
+        </svg>
+      </div>
+      <span class="home-network__member-label">Member</span>
+    </div>
+
+    <!-- ML: male medium skin, coral bg -->
+    <div class="home-network__member home-network__member--ml">
+      <div class="home-network__avatar" style="background:#fde8df">
+        <svg viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="21" cy="16" rx="9" ry="10" fill="#a0724a"/>
+          <ellipse cx="21" cy="13" rx="8" ry="7"  fill="#3d2410"/>
+          <ellipse cx="21" cy="18" rx="8" ry="9"  fill="#b8845c"/>
+          <path d="M6 50 Q8 32 21 30 Q34 32 36 50Z" fill="#1b2a4a"/>
+          <path d="M13 50 Q14 36 21 34 Q28 36 29 50Z" fill="#b8845c"/>
+        </svg>
+      </div>
+      <span class="home-network__member-label">Member</span>
+    </div>
+
+    <!-- BC: female with glasses, lavender bg -->
+    <div class="home-network__member home-network__member--bc">
+      <div class="home-network__avatar" style="background:#edeaf8">
+        <svg viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="21" cy="16" rx="9" ry="10" fill="#b07850"/>
+          <ellipse cx="21" cy="12" rx="8" ry="7"  fill="#2d1a0a"/>
+          <ellipse cx="21" cy="18" rx="8" ry="9"  fill="#c89060"/>
+          <!-- glasses -->
+          <rect x="14" y="17" width="6" height="4" rx="2" stroke="#444" stroke-width="1.2" fill="none"/>
+          <rect x="22" y="17" width="6" height="4" rx="2" stroke="#444" stroke-width="1.2" fill="none"/>
+          <line x1="20" y1="19" x2="22" y2="19" stroke="#444" stroke-width="1"/>
+          <path d="M6 50 Q8 32 21 30 Q34 32 36 50Z" fill="#e8a090"/>
+          <path d="M13 50 Q14 36 21 34 Q28 36 29 50Z" fill="#c89060"/>
+        </svg>
+      </div>
+      <span class="home-network__member-label">Member</span>
+    </div>
+
+    <!-- BR: male with glasses, peach bg -->
+    <div class="home-network__member home-network__member--br">
+      <div class="home-network__avatar" style="background:#fde8df">
+        <svg viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="21" cy="16" rx="9" ry="10" fill="#d4a574"/>
+          <ellipse cx="21" cy="12" rx="8" ry="7"  fill="#5a3820"/>
+          <ellipse cx="21" cy="18" rx="8" ry="9"  fill="#e8c090"/>
+          <!-- glasses -->
+          <rect x="14" y="17" width="6" height="4" rx="2" stroke="#555" stroke-width="1.2" fill="none"/>
+          <rect x="22" y="17" width="6" height="4" rx="2" stroke="#555" stroke-width="1.2" fill="none"/>
+          <line x1="20" y1="19" x2="22" y2="19" stroke="#555" stroke-width="1"/>
+          <path d="M6 50 Q8 32 21 30 Q34 32 36 50Z" fill="#7ecec4"/>
+          <path d="M13 50 Q14 36 21 34 Q28 36 29 50Z" fill="#e8c090"/>
+        </svg>
+      </div>
+      <span class="home-network__member-label">Member</span>
+    </div>
+
+  </div><!-- /home-partner__network -->
+</section>
+
+
+<!-- ════════════════════════════════
+     FEATURE CARDS
+════════════════════════════════ -->
+<div class="home-features">
+
+  <!-- For Your Members -->
+  <div class="home-feature-card home-feature-card--members">
+    <!-- Decorative wave -->
+    <svg class="home-feature-card__deco" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid slice">
+      <path d="M80 10 Q140 50 120 100 Q100 150 180 140 Q240 130 260 80" stroke="#c8c2e8" stroke-width="40" fill="none" opacity="0.5" stroke-linecap="round"/>
+      <path d="M60 60 Q120 100 100 150 Q80 200 160 180" stroke="#9b8ec4" stroke-width="20" fill="none" opacity="0.25" stroke-linecap="round"/>
+    </svg>
+
+    <div class="home-feature-card__icon-wrap">
+      <!-- People / members icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/>
+        <path d="M2 21v-2a5 5 0 0110 0v2"/><path d="M16 15a4 4 0 014 4v2"/>
+      </svg>
+    </div>
+
+    <div class="home-feature-card__body">
+      <h2 class="home-feature-card__title">For Your Members</h2>
+      <ul class="home-feature-card__list">
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Free quotes
+        </li>
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          AI-powered comparison
+        </li>
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Member pricing where available
+        </li>
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Australian support
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- For Your Association -->
+  <div class="home-feature-card home-feature-card--assoc">
+    <!-- Decorative wave -->
+    <svg class="home-feature-card__deco" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid slice">
+      <path d="M80 10 Q140 50 120 100 Q100 150 180 140 Q240 130 260 80" stroke="#7ecec4" stroke-width="40" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <path d="M60 60 Q120 100 100 150 Q80 200 160 180" stroke="#7ecec4" stroke-width="20" fill="none" opacity="0.22" stroke-linecap="round"/>
+    </svg>
+
+    <div class="home-feature-card__icon-wrap">
+      <!-- Building / institution icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18M4 21V7l8-4 8 4v14"/>
+        <rect x="9" y="14" width="6" height="7" rx="1"/>
+        <path d="M9 10h.01M12 10h.01M15 10h.01"/>
+        <path d="M3 7h18"/>
+      </svg>
+    </div>
+
+    <div class="home-feature-card__body">
+      <h2 class="home-feature-card__title">For Your Association</h2>
+      <ul class="home-feature-card__list">
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Zero-cost benefit
+        </li>
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Optional revenue share
+        </li>
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Simple integration
+        </li>
+        <li>
+          <svg class="home-feature-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Co-branded page
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /home-features -->
+
+
+<!-- ════════════════════════════════
+     STEPS
+════════════════════════════════ -->
+<div class="home-steps">
+
+  <!-- Step 01 -->
+  <div class="home-step home-step--1">
+    <div class="home-step__icon-wrap">
+      <!-- Chat / talk icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        <circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="home-step__text">
+      <span class="home-step__num">01</span>
+      <span class="home-step__label">Talk with us</span>
+    </div>
+  </div>
+
+  <!-- Arrow -->
+  <div class="home-steps__arrow">
+    <svg viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="8" x2="30" y2="8" stroke="#9ca3af" stroke-width="1.4"/>
+      <path d="M28 3 L34 8 L28 13" stroke="#9ca3af" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Step 02 -->
+  <div class="home-step home-step--2">
+    <div class="home-step__icon-wrap">
+      <!-- Code / build icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      </svg>
+    </div>
+    <div class="home-step__text">
+      <span class="home-step__num">02</span>
+      <span class="home-step__label">We build it</span>
+    </div>
+  </div>
+
+  <!-- Arrow -->
+  <div class="home-steps__arrow">
+    <svg viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="8" x2="30" y2="8" stroke="#9ca3af" stroke-width="1.4"/>
+      <path d="M28 3 L34 8 L28 13" stroke="#9ca3af" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Step 03 -->
+  <div class="home-step home-step--3">
+    <div class="home-step__icon-wrap">
+      <!-- Group / members get quotes icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="2.5"/>
+        <path d="M2 21v-2a5 5 0 0110 0v2"/>
+        <path d="M16 15a4 4 0 014 4v2"/>
+        <path d="M13 11l2 2 4-4" stroke-width="1.6"/>
+      </svg>
+    </div>
+    <div class="home-step__text">
+      <span class="home-step__num">03</span>
+      <span class="home-step__label">Members get quotes</span>
+    </div>
+  </div>
+
+</div><!-- /home-steps -->
+
+
+<!-- ════════════════════════════════
+     CTA BUTTONS
+════════════════════════════════ -->
+<div class="home-cta">
+  <a href="#" class="home-cta__btn home-cta__btn--primary">
+    Become a Partner
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="8" x2="13" y2="8"/><polyline points="9 4 13 8 9 12"/>
+    </svg>
+  </a>
+  <a href="#" class="home-cta__btn home-cta__btn--secondary">
+    Talk to Partnerships Team
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="8" x2="13" y2="8"/><polyline points="9 4 13 8 9 12"/>
+    </svg>
+  </a>
+</div>
+
+</body>
+</html>
