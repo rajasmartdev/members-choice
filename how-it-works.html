@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Members Choice</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid px-4 px-lg-5">
+
+    <!-- Brand -->
+    <a class="navbar-brand me-4" href="index.html">
+      <img src="assets/img/logo.png" alt="Members Choice Logo" width="260" height="auto"/>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="associations.html">For Associations</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Our Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="claims.html">Claims</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+      <a href="contact.html" class="btn-quote ms-lg-3 mt-3 mt-lg-0">
+        Get a Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — HOW IT WORKS
+═══════════════════════════════════════ -->
+<section class="how-s1">
+  
+  <div class="how-dashed"></div>
+
+  <div class="row align-items-center g-5">
+
+    <!-- Left -->
+    <div class="col-lg-5">
+      <p class="how-label">How it works</p>
+      <h1 class="how-headline">Three steps.<br>A few minutes.<br>No hassle<span class="how-dot">.</span></h1>
+      <div class="how-divider"></div>
+      <p class="how-body mb-4">
+        Most insurance quotes waste your time. Members Choice uses AI to do the heavy lifting
+        so you get a <a href="contact.html">personalised result fast</a>, and you stay in control.
+      </p>
+      <div class="d-flex gap-3 flex-wrap">
+        <button class="how-btn-primary">Try the Quote Tool <i class="bi bi-arrow-right"></i></button>
+        <button class="how-btn-outline">Talk to a Person <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="col-lg-7">
+
+      <!-- Quote Card -->
+      <div class="how-quote-card mb-3">
+        <div class="how-ai-badge">
+          <i class="bi bi-stars" style="font-size:11px;margin-right:1px;color:var(--purple);"></i>AI
+        </div>
+        <p class="how-card-label">AI Quote Preview</p>
+        <h2 class="how-card-title">Your personalised quote</h2>
+        <p class="how-card-sub">
+          <i class="bi bi-shield-check" style="color:var(--purple);font-size:16px;"></i>
+          Built for you and your association
+        </p>
+
+        <div class="how-card-body">
+          <!-- Tabs -->
+          <div class="how-tabs">
+            <div class="how-tab how-tab-active">
+              <i class="bi bi-file-text"></i> Quote Summary
+            </div>
+            <div class="how-tab"><i class="bi bi-shield"></i> Your Covers</div>
+            <div class="how-tab"><i class="bi bi-star"></i> Recommendations</div>
+            <div class="how-tab"><i class="bi bi-info-circle"></i> Why this price</div>
+          </div>
+
+          <!-- Content -->
+          <div class="how-tab-content">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p style="font-size:12px;color:var(--muted);margin-bottom:2px;">Total annual premium</p>
+                <p class="how-price-big">$612.00 <span style="font-size:13px;font-weight:400;color:var(--muted);">inc. GST</span></p>
+                <ul class="how-check-list mt-2">
+                  <li><i class="bi bi-check-circle-fill"></i> Tailored for your association</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Cover gaps identified</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Competitive pricing</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Australian support</li>
+                </ul>
+              </div>
+              
+            </div>
+            <div class="how-card-actions mt-4">
+              <button class="how-btn-purple">View Your Quote <i class="bi bi-arrow-right"></i></button>
+              <button class="how-btn-sm-outline">Edit My Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="row g-2">
+        <div class="col-3">
+          <div class="how-stat-card">
+            <div class="how-stat-icon purple"><i class="bi bi-clock"></i></div>
+            <p class="how-stat-title">Under 5 minutes</p>
+            <p class="how-stat-sub">Most quotes ready in under 5 minutes.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="how-stat-card">
+            <div class="how-stat-icon green"><i class="bi bi-currency-dollar"></i></div>
+            <p class="how-stat-title">100% free</p>
+            <p class="how-stat-sub">No obligation. No hidden costs.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="how-stat-card">
+            <div class="how-stat-icon peach"><i class="bi bi-flag"></i></div>
+            <p class="how-stat-title">Gaps flagged</p>
+            <p class="how-stat-sub">We highlight what's not covered.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="how-stat-card">
+            <div class="how-stat-icon lavender"><i class="bi bi-headset"></i></div>
+            <p class="how-stat-title">Real support</p>
+            <p class="how-stat-sub">Australians here when you need us.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — THREE STEPS
+═══════════════════════════════════════ -->
+<section class="how-s2">
+  <div class="how-blob how-blob-5"></div>
+  <div class="how-blob how-blob-6"></div>
+
+  <p class="how-label">Here's what happens</p>
+  <h2 class="how-s2-title">Simple from start to finish<span class="how-dot">.</span></h2>
+  <p class="how-s2-sub mb-5">
+    Three easy steps for associations. Fast for your members.<br>
+    No cost, no pressure, no obligation.
+  </p>
+
+  <div class="row g-4 text-start">
+
+    <!-- Step 01 -->
+    <div class="col-md-4">
+      <div class="how-step-card">
+        <div class="how-step-illo">
+          <div class="how-illo-box"><i class="bi bi-bank"></i></div>
+          <div class="how-illo-badge"><i class="bi bi-people-fill"></i></div>
+        </div>
+        <p class="how-step-num">01</p>
+        <h3 class="how-step-title">Your association partners with Members Choice<span class="how-dot">.</span></h3>
+        <div class="how-step-accent"></div>
+        <p class="how-step-body">Members get free access through their portal, website, or communications.</p>
+      </div>
+    </div>
+
+    <!-- Step 02 -->
+    <div class="col-md-4">
+      <div class="how-step-card">
+        <div class="how-step-illo">
+          <div class="how-mock-ai">
+            <div class="how-ai-chip">AI</div>
+            <div class="how-mock-row mt-1">
+              <i class="bi bi-person"></i>
+              <div class="how-mock-line"></div>
+              <i class="bi bi-check2"></i>
+            </div>
+            <div class="how-mock-row">
+              <i class="bi bi-house"></i>
+              <div class="how-mock-line"></div>
+              <i class="bi bi-check2"></i>
+            </div>
+            <div class="how-mock-row">
+              <i class="bi bi-car-front"></i>
+              <div class="how-mock-line"></div>
+              <i class="bi bi-check2"></i>
+            </div>
+            <div class="how-mock-row">
+              <i class="bi bi-cash-coin"></i>
+              <div class="how-mock-line"></div>
+              <i class="bi bi-check2"></i>
+            </div>
+            <div class="how-mock-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+        <p class="how-step-num">02</p>
+        <h3 class="how-step-title">You use our AI quote tool<span class="how-dot">.</span></h3>
+        <div class="how-step-accent"></div>
+        <p class="how-step-body">Members answer a short set of questions about their situation, current cover, and what they need. Most finish in under five minutes.</p>
+      </div>
+    </div>
+
+    <!-- Step 03 -->
+    <div class="col-md-4">
+      <div class="how-step-card">
+        <div class="how-step-illo">
+          <div class="how-mock-receipt">
+            <p class="how-price-small">Total annual premium</p>
+            <p class="how-price">$612.00</p>
+            <div class="mt-1 d-flex flex-column gap-1">
+              <div class="how-r-row"><i class="bi bi-check-circle-fill"></i><div class="how-r-line"></div></div>
+              <div class="how-r-row"><i class="bi bi-check-circle-fill"></i><div class="how-r-line"></div></div>
+              <div class="how-r-row"><i class="bi bi-check-circle-fill"></i><div class="how-r-line"></div></div>
+            </div>
+            <div class="how-shield-sm mt-2">
+              <i class="bi bi-shield-check"></i>
+            </div>
+          </div>
+        </div>
+        <p class="how-step-num">03</p>
+        <h3 class="how-step-title">You decide what to do next<span class="how-dot">.</span></h3>
+        <div class="how-step-accent"></div>
+        <p class="how-step-body">Review the quote, talk to the team, buy if it suits, or walk away. Free either way, with no follow-up pressure.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-flex gap-3 justify-content-center mt-5">
+    <button class="how-btn-primary">Try the Quote Tool <i class="bi bi-arrow-right"></i></button>
+    <button class="how-btn-outline">Talk to a Person <i class="bi bi-arrow-right"></i></button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — OUR PROMISE
+═══════════════════════════════════════ -->
+<section class="how-s3">
+  <div class="how-blob how-blob-7"></div>
+  <div class="how-blob how-blob-8"></div>
+
+  <p class="how-label">Our Promise</p>
+  <h2 class="how-s3-title">Clear benefits. No compromises<span class="how-dot">.</span></h2>
+  <div style="width:36px;height:3px;background:var(--green);border-radius:2px;margin:14px auto 18px;"></div>
+  <p class="how-s3-sub mb-5">
+    Members Choice is built to put members first — with honest advice,<br>
+    real people, and support you can rely on.
+  </p>
+
+  <div class="row g-4 text-start">
+
+    <!-- What You Get -->
+    <div class="col-md-6">
+      <div class="how-promise-card">
+        <div class="how-promise-badge green-bg"><i class="bi bi-shield-check"></i></div>
+        <p class="how-promise-tag green">What you get</p>
+        <h3 class="how-promise-title">What's included in every quote<span class="how-dot">.</span></h3>
+        <div class="how-promise-accent green"></div>
+        <ul class="how-promise-list mt-5">
+          <li>
+            <div class="how-ci green"><i class="bi bi-check"></i></div>
+            <span><strong>Personalised quotes</strong> across multiple products — not a generic template.</span>
+          </li>
+          <li>
+            <div class="how-ci green"><i class="bi bi-check"></i></div>
+            <span><strong>Honest comparisons</strong> against what you already have.</span>
+          </li>
+          <li>
+            <div class="how-ci green"><i class="bi bi-check"></i></div>
+            <span><strong>Gaps in your current cover</strong> flagged clearly.</span>
+          </li>
+          <li>
+            <div class="how-ci green"><i class="bi bi-check"></i></div>
+            <span><strong>A real person to talk to</strong> before, during, or after — same number every time.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- What We Don't Do -->
+    <div class="col-md-6">
+      <div class="how-promise-card">
+        <div class="how-promise-badge coral-bg"><i class="bi bi-x-lg"></i></div>
+        <p class="how-promise-tag coral">What we don't do</p>
+        <h3 class="how-promise-title">A few things we won't do<span class="how-dot">.</span></h3>
+        <div class="how-promise-accent coral"></div>
+        <ul class="how-promise-list mt-5">
+          <li>
+            <div class="how-ci coral"><i class="bi bi-x"></i></div>
+            <span><strong>Spam you.</strong> One quote. One follow-up if you want it. That's it.</span>
+          </li>
+          <li>
+            <div class="how-ci coral"><i class="bi bi-x"></i></div>
+            <span><strong>Sell your details.</strong> Your information stays with Members Choice.</span>
+          </li>
+          <li>
+            <div class="how-ci coral"><i class="bi bi-x"></i></div>
+            <span><strong>Push cover you don't need.</strong> We quote what suits your situation.</span>
+          </li>
+          <li>
+            <div class="how-ci coral"><i class="bi bi-x"></i></div>
+            <span><strong>Replace a real person</strong> when you need one.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — OUR AI QUOTE TOOL
+═══════════════════════════════════════ -->
+<section class="how-s4">
+  <div class="how-blob how-b1"></div>
+  <div class="how-blob how-b2"></div>
+  <div class="how-blob how-b3"></div>
+  <div class="how-blob how-b4"></div>
+  <div class="how-blob how-b5"></div>
+  <div class="how-dashed"></div>
+ 
+  <div class="row align-items-center g-5">
+ 
+    <!-- Left -->
+    <div class="col-lg-6">
+      <p class="how-label">Our AI Quote Tool</p>
+      <h2 class="how-s4-headline">
+        Faster, smarter,<br>fairer<span class="how-dot">.</span>
+      </h2>
+      <div class="how-divider"></div>
+      <p class="how-s4-body">
+        Members Choice uses AI to skip the repetitive part of insurance, asks the questions that matter, compares options across our product range, and builds a <a href="contact.html">tailored quote</a>—fast.
+      </p>
+      <div class="d-flex gap-3 flex-wrap">
+        <button class="how-btn-primary">Start a Quote <i class="bi bi-arrow-right"></i></button>
+        <button class="how-btn-outline">
+          Call or Chat <i class="bi bi-whatsapp"></i>
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Right — FAQ Cards -->
+    <div class="col-lg-6">
+      <div class="d-flex flex-column gap-3">
+ 
+        <!-- Card 1 -->
+        <div class="how-faq-card">
+          <div class="how-faq-icon purple">
+            <i class="bi bi-clock"></i>
+          </div>
+          <div>
+            <p class="how-faq-title">How long does it take?</p>
+            <p class="how-faq-body">Under five minutes for most members.</p>
+          </div>
+        </div>
+ 
+        <!-- Card 2 -->
+        <div class="how-faq-card">
+          <div class="how-faq-icon green">
+            <i class="bi bi-shield-lock"></i>
+          </div>
+          <div>
+            <p class="how-faq-title">Is it safe?</p>
+            <p class="how-faq-body">Your information is encrypted and stays with us. We don't sell it, pass it on, or use it to train external models.</p>
+          </div>
+        </div>
+ 
+        <!-- Card 3 -->
+        <div class="how-faq-card">
+          <div class="how-faq-icon peach">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <div>
+            <p class="how-faq-title">Prefer to talk?</p>
+            <p class="how-faq-body">Call or chat with our team at any point. We're here.</p>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+ 
+<!-- ═══════════════════════════════════════
+     SECTION 5 — HERO / READY WHEN YOU ARE
+═══════════════════════════════════════ -->
+<section class="how-s5">
+  <div class="how-s5-wrap">
+    <div class="how-blob how-b6"></div>
+    <div class="how-blob how-b7"></div>
+    <div class="how-blob how-b8"></div>
+    <div class="how-blob how-b9"></div>
+    <div class="how-dashed2"></div>
+ 
+    <div class="row align-items-end g-5">
+ 
+      <!-- Left -->
+      <div class="col-lg-6 pb-4">
+        <p class="how-label">Ready when you are</p>
+        <h1 class="how-s5-headline">
+          Get a personalised quote without the runaround<span class="how-dot">.</span>
+        </h1>
+        <p class="how-s5-body">
+          It's free through your association, built around your situation, and backed by real people when you need them.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <button class="how-btn-primary">Try the Quote Tool <i class="bi bi-arrow-right"></i></button>
+          <button class="how-btn-outline">Talk to a Person <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+ 
+      <!-- Right — Preview Card -->
+      <div class="col-lg-6 pb-0">
+        <div class="how-preview-card">
+          <div class="how-preview-ai-badge">
+            <i class="bi bi-stars" style="font-size:20px;margin-right:1px;color:var(--purple);"></i>AI
+          </div>
+          <p class="how-preview-label">AI Quote Preview</p>
+          <h3 class="how-preview-title">Your personalised quote</h3>
+          <ul class="how-preview-list">
+            <li><i class="bi bi-check-circle-fill"></i> Built for your association</li>
+            <li><i class="bi bi-check-circle-fill"></i> Tailored to your situation</li>
+            <li><i class="bi bi-check-circle-fill"></i> Competitive pricing</li>
+            <li><i class="bi bi-check-circle-fill"></i> Australian support</li>
+          </ul>
+ 
+          
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Bottom stats bar -->
+    <div class="how-s5-stats">
+      <div class="d-flex align-items-center gap-4 flex-wrap">
+ 
+        <div class="how-s5-stat flex-fill">
+          <div class="how-s5-stat-icon purple">
+            <i class="bi bi-tag"></i>
+          </div>
+          <div>
+            <p class="how-s5-stat-title">Free quote</p>
+            <p class="how-s5-stat-sub">No obligation. Ever.</p>
+          </div>
+        </div>
+ 
+        <div class="how-s5-divider d-none d-md-block"></div>
+ 
+        <div class="how-s5-stat flex-fill">
+          <div class="how-s5-stat-icon green">
+            <i class="bi bi-clock"></i>
+          </div>
+          <div>
+            <p class="how-s5-stat-title">Under 5 minutes</p>
+            <p class="how-s5-stat-sub">Quick, easy and secure.</p>
+          </div>
+        </div>
+ 
+        <div class="how-s5-divider d-none d-md-block"></div>
+ 
+        <div class="how-s5-stat flex-fill">
+          <div class="how-s5-stat-icon peach">
+            <i class="bi bi-headset"></i>
+          </div>
+          <div>
+            <p class="how-s5-stat-title">Real support</p>
+            <p class="how-s5-stat-sub">Australians here when you need us.</p>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+ 
+      <!-- Brand + socials -->
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            
+            <img src="assets/img/logo.png" alt="" width="250">
+          </a>
+          <div class="footer-socials">
+            <!-- LinkedIn -->
+            <a href="contact.html" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="4"/>
+                <line x1="8" y1="11" x2="8" y2="16"/>
+                <line x1="8" y1="8" x2="8" y2="8.5"/>
+                <path d="M12 16v-5M16 16v-3a2 2 0 00-4 0"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="contact.html" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="4"/>
+                <path d="M15 8h-2a1 1 0 00-1 1v2h3l-.5 3H12v6"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="contact.html" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Products -->
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Health Insurance</a></li>
+          <li><a href="contact.html">Life Insurance</a></li>
+          <li><a href="contact.html">Travel Insurance</a></li>
+          <li><a href="contact.html">Income Protection</a></li>
+        </ul>
+      </div>
+ 
+      <!-- Company -->
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">About Us</a></li>
+          <li><a href="contact.html">For Associations</a></li>
+          <li><a href="about.html">Our Partners</a></li>
+          <li><a href="about.html">News &amp; Insights</a></li>
+        </ul>
+      </div>
+ 
+      <!-- Support -->
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <div class="footer-col-title">Support</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Help Centre</a></li>
+          <li><a href="contact.html">Claims Support</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Login</a></li>
+        </ul>
+      </div>
+ 
+    </div><!-- /row -->
+ 
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>© 2025 Members Choice. All rights reserved.</p>
+      <p>
+        <a href="contact.html" style="color:var(--muted);text-decoration:none;margin-right:20px;" onmouseover="this.style.color='var(--navy)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+        <a href="contact.html" style="color:var(--muted);text-decoration:none;margin-right:20px;" onmouseover="this.style.color='var(--navy)'" onmouseout="this.style.color='var(--muted)'">Terms of Use</a>
+        <a href="contact.html" style="color:var(--muted);text-decoration:none;" onmouseover="this.style.color='var(--navy)'" onmouseout="this.style.color='var(--muted)'">FSG</a>
+      </p>
+    </div>
+ 
+  </div>
+</footer>
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
