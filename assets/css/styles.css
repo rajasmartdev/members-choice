@@ -65,7 +65,7 @@
     .brand-text .bottom { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 13px; letter-spacing: .18em; color: var(--navy); line-height: 1; margin-top: 2px; }
 
     .navbar-nav .nav-link {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 400;
       color: var(--navy) !important;
       padding: 6px 14px !important;
@@ -3354,11 +3354,10 @@
     ══════════════════════════════════════════════════════════════ */
     .ctn-hero {
       position: relative;
-      background: url("../img/ctn-banner.png") no-repeat center center;
+      background: url("../img/cta-banner.png") no-repeat center center;
       background-size: cover;
       overflow: hidden;
-      padding: 48px 60px;
-      min-height: 200px;
+      min-height: 550px;
       display: flex;
       align-items: center;
     }
@@ -3384,7 +3383,7 @@
       opacity: 0.6;
     }
  
-    .ctn-hero-content { position: relative; z-index: 1; }
+    .ctn-hero-content { position: relative; z-index: 1; padding-left: 100px; }
  
     .ctn-hero-label {
       font-size: 18px;
@@ -3573,12 +3572,12 @@
     }
  
     .ctn-form-left-desc {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--text);
       line-height: 1.65;
       margin-bottom: 28px;
-      max-width: 280px;
-      font-weight: 600;
+      max-width: 300px;
+      font-weight: 500;
     }
  
     .ctn-info-item {
@@ -3602,7 +3601,7 @@
       margin-bottom: 2px;
     }
     .ctn-info-body p {
-      font-size: 18px;
+      font-size: 17px;
       color: var(--muted);
       margin: 0;
       line-height: 1.5;
