@@ -4,7 +4,7 @@
     :root {
       --navy:    #1b2a4a;
       --sand:    #F6F6F4;
-      --coral:   #e66e43;
+      --coral:   #854f3c;
       --purple:  #9a88d6;
       --mint:    #6bd1c5;
       --peach:   #e29574;
@@ -2629,6 +2629,9 @@
       background: #f2fbfa;
     }
 
+    .home-feature-card--ai {
+      background: #f8ece8;
+    }
     /* Decorative wave inside card */
     .home-feature-card__deco {
       position: absolute;
@@ -2656,6 +2659,9 @@
 
     .home-feature-card--assoc .home-feature-card__icon-wrap {
       background: var(--mint);
+    }
+    .home-feature-card--ai .home-feature-card__icon-wrap {
+      background: var(--peach);
     }
 
     .home-feature-card__icon-wrap svg {
@@ -2697,6 +2703,7 @@
 
     .home-feature-card--members .home-feature-card__check { color: var(--purple); }
     .home-feature-card--assoc  .home-feature-card__check { color: var(--mint); }
+    .home-feature-card--ai     .home-feature-card__check { color: var(--peach); }
 
     /* ── STEPS ── */
     .home-steps {
