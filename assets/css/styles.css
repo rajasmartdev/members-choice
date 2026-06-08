@@ -2605,7 +2605,7 @@
     /* ── FEATURE CARDS ── */
     .home-features {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       padding: 0 5rem 2.5rem;
     }
@@ -2678,6 +2678,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.45rem;
+      padding-left: 0;
     }
 
     .home-feature-card__list li {
