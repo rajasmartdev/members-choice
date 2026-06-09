@@ -1831,379 +1831,400 @@
       }
     }
 
-     /* ────────────────────────────────
-       SECTION WRAPPER
-    ──────────────────────────────── */
-        .home-hiw-section {
-            background: var(--sand);
-            padding: 72px 100px 64px;
-        }
+    .home-hiw-section {
+    background: var(--sand);
+    padding: 72px 40px 20px;
+}
 
-        /* ── Header ── */
-        .home-hiw-header {
-            text-align: center;
-            margin-bottom: 56px;
-        }
+/* ── Header ── */
+.home-hiw-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
 
-        .home-hiw-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(52px, 6vw, 84px);
-            font-weight: 400;
-            color: var(--navy);
-            line-height: 1;
-            margin-bottom: 14px;
-        }
+.home-hiw-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(52px, 6vw, 84px);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 14px;
+}
 
-        .home-hiw-subtitle {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(18px, 2vw, 24px);
-            font-weight: 400;
-            color: var(--navy);
-            margin-bottom: 6px;
-        }
+.home-hiw-subtitle {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
 
-        .home-hiw-tagline {
-            font-size: 15px;
-            color: var(--muted);
-        }
+.home-hiw-tagline {
+    font-size: 15px;
+    color: var(--muted);
+}
 
-        /* ────────────────────────────────
-       STEPS ROW
-    ──────────────────────────────── */
-        .home-hiw-steps {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            gap: 0;
-            margin-bottom: 40px;
-            flex-wrap: nowrap;
-        }
+/* ── Steps row ── */
+.home-hiw-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+}
 
-        /* Step block */
-        .home-hiw-step {
-            display: contents;
-            flex-direction: column;
-            align-items: flex-start;
-            flex: 0 0 auto;
-            width: 200px;
-        }
+.home-hiw-step {
+    display: contents;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 auto;
+    width: 200px;
+}
 
-        .home-hiw-step-num {
-            font-family: 'DM Serif Display', serif;
-            font-size: 64px;
-            font-weight: 400;
-            color: var(--navy);
-            line-height: 1;
-            margin-bottom: 10px;
-        }
+.home-hiw-step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 10px;
+}
 
-        .home-hiw-step-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 22px;
-            color: var(--navy);
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
+.home-hiw-step-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
 
-        .home-hiw-step-desc {
-            font-size: 14px;
-            color: var(--muted);
-            line-height: 1.5;
-        }
+.home-hiw-step-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+}
 
-        /* Arrow between steps */
-        .home-hiw-arrow {
-            flex-shrink: 0;
-            margin: 0 16px;
-            color: var(--navy);
-            opacity: .45;
-            font-size: 22px;
-            margin-bottom: 80px;
-        }
+.home-hiw-arrow {
+    flex-shrink: 0;
+    margin: 0 10px;
+    color: var(--navy);
+    opacity: .45;
+    font-size: 22px;
+    margin-bottom: 80px;
+}
 
-        /* ── Mockup cards ── */
-        .home-hiw-mock {
-            background: var(--white);
-            border: 1.5px solid var(--lavender-mid);
-            border-radius: 16px;
-            padding: 18px;
-            width: 220px;
-            margin-bottom: 24px;
-            flex-shrink: 0;
-        }
+/* ── Uniform mockup card base ── */
+.home-hiw-mock {
+    background: var(--white);
+    border: 1.5px solid var(--lavender-mid);
+    border-radius: 16px;
+    padding: 18px;
+    width: 200px;
+    min-height: 210px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+}
 
-        /* Step 1 mockup - browser window */
-        .home-hiw-mock-browser {
-            position: relative;
-        }
+/* ── Step 1 — Browser mockup ── */
+.home-hiw-mock-browser {
+    position: relative;
+}
 
-        .home-hiw-mock-dots {
-            display: flex;
-            gap: 5px;
-            margin-bottom: 14px;
-        }
+.home-hiw-mock-dots {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 14px;
+}
 
-        .home-hiw-mock-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--lavender-mid);
-        }
+.home-hiw-mock-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lavender-mid);
+}
 
-        .home-hiw-mock-bar {
-            height: 8px;
-            border-radius: 4px;
-            background: var(--lavender-bg);
-            margin-bottom: 14px;
-        }
+.home-hiw-mock-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--lavender-bg);
+    margin-bottom: 14px;
+}
 
-        .home-hiw-mock-bar.short {
-            width: 60%;
-        }
+.home-hiw-mock-bar.short { width: 60%; }
+.home-hiw-mock-bar.med   { width: 80%; }
 
-        .home-hiw-mock-bar.med {
-            width: 80%;
-        }
+.home-hiw-mock-avatar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
 
-        .home-hiw-mock-avatar-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
+.home-hiw-mock-avatar-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--lavender-bg);
+    border: 1.5px solid var(--lavender-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
-        .home-hiw-mock-avatar-circle {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: var(--lavender-bg);
-            border: 1.5px solid var(--lavender-mid);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
+.home-hiw-mock-lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
-        .home-hiw-mock-lines {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
+.home-hiw-mock-line {
+    height: 7px;
+    border-radius: 4px;
+    background: var(--lavender-bg);
+}
 
-        .home-hiw-mock-line {
-            height: 7px;
-            border-radius: 4px;
-            background: var(--lavender-bg);
-        }
+.home-hiw-mock-line.w100 { width: 100%; }
+.home-hiw-mock-line.w70  { width: 70%; }
 
-        .home-hiw-mock-line.w100 {
-            width: 100%;
-        }
+.home-hiw-mock-btn-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
 
-        .home-hiw-mock-line.w70 {
-            width: 70%;
-        }
+.home-hiw-mock-purple-btn {
+    background: var(--purple);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
 
-        /* purple button in step 1 */
-        .home-hiw-mock-btn-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 6px;
-        }
+.home-hiw-mock-bank-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid var(--lavender-mid);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .home-hiw-mock-purple-btn {
-            background: var(--purple);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 600;
-            padding: 8px 12px;
-            border-radius: 8px;
-            white-space: nowrap;
-        }
+/* ── Step 2 — Phone mockup ── */
+.home-hiw-mock-phone-progress {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 14px;
+}
 
-        .home-hiw-mock-bank-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 1.5px solid var(--lavender-mid);
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.home-hiw-mock-phone-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lavender-bg);
+}
 
-        /* Step 2 mockup - phone */
-        .home-hiw-mock-phone {
-            width: 180px;
-            border: 2px solid var(--lavender-mid);
-            border-radius: 28px;
-            padding: 16px 14px 20px;
-            background: var(--white);
-            margin-bottom: 24px;
-        }
+.home-hiw-mock-phone-dot.active {
+    background: var(--purple);
+}
 
-        .home-hiw-mock-phone-progress {
-            display: flex;
-            gap: 6px;
-            justify-content: center;
-            margin-bottom: 14px;
-        }
+.home-hiw-mock-phone-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--lavender-bg);
+}
 
-        .home-hiw-mock-phone-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--lavender-bg);
-        }
+.home-hiw-mock-phone-row:last-of-type {
+    border-bottom: none;
+}
 
-        .home-hiw-mock-phone-dot.active {
-            background: var(--purple);
-        }
+.home-hiw-mock-phone-icon {
+    color: var(--navy);
+    opacity: .6;
+}
 
-        .home-hiw-mock-phone-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid var(--lavender-bg);
-        }
+.home-hiw-mock-phone-line {
+    flex: 1;
+    height: 7px;
+    background: var(--lavender-bg);
+    border-radius: 4px;
+    margin: 0 10px;
+}
 
-        .home-hiw-mock-phone-row:last-of-type {
-            border-bottom: none;
-        }
+.home-hiw-mock-phone-check {
+    color: var(--mint);
+    font-size: 13px;
+    font-weight: 700;
+}
 
-        .home-hiw-mock-phone-icon {
-            color: var(--navy);
-            opacity: .6;
-        }
+.home-hiw-mock-phone-cta {
+    background: var(--purple);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    padding: 9px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
 
-        .home-hiw-mock-phone-line {
-            flex: 1;
-            height: 7px;
-            background: var(--lavender-bg);
-            border-radius: 4px;
-            margin: 0 10px;
-        }
+/* ── Step 3 — Quote card ── */
+.home-hiw-mock-quote-label {
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
 
-        .home-hiw-mock-phone-check {
-            color: var(--mint);
-            font-size: 13px;
-            font-weight: 700;
-        }
+.home-hiw-mock-quote-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 5px;
+}
 
-        .home-hiw-mock-phone-cta {
-            background: var(--purple);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 600;
-            text-align: center;
-            padding: 9px;
-            border-radius: 8px;
-            margin-top: 12px;
-        }
+.home-hiw-mock-quote-price span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 400;
+}
 
-        /* Step 3 mockup - quote card */
-        .home-hiw-mock-quote {
-            width: 230px;
-            border: 1.5px solid var(--lavender-mid);
-            border-radius: 16px;
-            padding: 16px;
-            background: var(--white);
-            margin-bottom: 24px;
-            position: relative;
-        }
+.home-hiw-mock-quote-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 11px;
+    color: var(--navy);
+}
 
-        .home-hiw-mock-quote-label {
-            font-size: 10px;
-            color: var(--muted);
-            margin-bottom: 4px;
-        }
+.home-hiw-mock-quote-row .check-green {
+    color: var(--mint);
+    font-weight: 700;
+    font-size: 12px;
+}
 
-        .home-hiw-mock-quote-price {
-            font-family: 'DM Serif Display', serif;
-            font-size: 22px;
-            color: var(--navy);
-            margin-bottom: 12px;
-        }
+.home-hiw-mock-quote-row .tick-left {
+    color: var(--purple);
+    margin-right: 4px;
+    font-size: 11px;
+}
 
-        .home-hiw-mock-quote-price span {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
-            color: var(--muted);
-            font-weight: 400;
-        }
+.home-hiw-mock-quote-actions {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
-        .home-hiw-mock-quote-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 6px;
-            font-size: 11px;
-            color: var(--navy);
-        }
+.home-hiw-mock-quote-btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
 
-        .home-hiw-mock-quote-row .check-green {
-            color: var(--mint);
-            font-weight: 700;
-            font-size: 12px;
-        }
+.home-hiw-mock-quote-btn-secondary {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
 
-        .home-hiw-mock-quote-row .tick-left {
-            color: var(--purple);
-            margin-right: 4px;
-            font-size: 11px;
-        }
+/* ── Step 4 — Insurer card ── */
+.home-hiw-mock-insurer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
-        .home-hiw-mock-quote-actions {
-            margin-top: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
+.home-hiw-mock-ins-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
 
-        .home-hiw-mock-quote-btn-primary {
-            background: var(--navy);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 600;
-            padding: 8px;
-            border-radius: 6px;
-            text-align: center;
-        }
+.home-hiw-mock-ins-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--lavender-bg);
+    border: 1.5px solid var(--lavender-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
-        .home-hiw-mock-quote-btn-secondary {
-            border: 1px solid var(--navy);
-            color: var(--navy);
-            font-size: 11px;
-            font-weight: 500;
-            padding: 8px;
-            border-radius: 6px;
-            text-align: center;
-        }
+.home-hiw-mock-ins-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    color: var(--navy);
+    line-height: 1.3;
+    margin: 0;
+}
 
-        /* floating icons on quote card */
-        .home-hiw-mock-quote-floats {
-            position: absolute;
-            right: -18px;
-            top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+.home-hiw-mock-ins-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--lavender-bg);
+    border-radius: 8px;
+    padding: 7px 10px;
+}
 
-        .home-hiw-mock-float-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 1.5px solid var(--lavender-mid);
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(27, 42, 74, .08);
-        }
+.home-hiw-mock-ins-row.selected {
+    background: var(--purple);
+}
+
+.home-hiw-mock-ins-name {
+    font-size: 11px;
+    color: var(--navy);
+    font-weight: 500;
+}
+
+.home-hiw-mock-ins-price {
+    font-size: 11px;
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.home-hiw-mock-ins-row.selected .home-hiw-mock-ins-name {
+    color: var(--white);
+}
+
+.home-hiw-mock-ins-row.selected .home-hiw-mock-ins-price {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.home-hiw-mock-ins-confirm {
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 9px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2px;
+}
 
         /* ────────────────────────────────
        INCLUDED IN EVERY QUOTE BAR
